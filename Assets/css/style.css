@@ -1,0 +1,26 @@
+/*
+ * MinimizeSidebar for kanboard
+ * Licensed under the MIT license - MinimizeSidebar/LICENSE
+ * https://github.com/kenlog/MinimizeSidebar
+ * Copyright (c) 2019 Valentino Pesce - https://iltuobrand.it
+ */
+
+.sidebar {
+    transition: all .1s;
+}
+
+.sidebar.collapsed {
+    max-width: 0;
+    overflow: hidden;
+}
+
+.button-minimize{
+    border-radius: 0px 5px 5px 0px;
+    height: 100%;
+    max-width: 30px;
+    font-size: 70%;
+}
+
+.sidebar-content{
+    max-width: 99%;
+}

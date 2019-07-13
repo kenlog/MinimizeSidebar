@@ -11,6 +11,7 @@
 [![Downloads](https://img.shields.io/github/downloads/kenlog/MinimizeSidebar/total.svg)](https://github.com/kenlog/MinimizeSidebar/releases)
 
 # Minimize Sidebar for kanboard
+<noscript><a href="https://liberapay.com/kenlog/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 
 Option to minimize sidebar.
 

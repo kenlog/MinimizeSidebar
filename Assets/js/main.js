@@ -6,23 +6,27 @@
  */
 
 $(document).ready(function () {
-  if (typeof (Storage) !== "undefined") {
-    if (localStorage.sidebar) {
-      $("#sidebar").toggle();
-    }
-  }
-
-  $("#minimize-sidebar").click(function () {
-    $("#sidebar").toggle();
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('controller') == "TaskViewController" || urlParams.get('controller') == "DashboardController") {
+    $(".sidebar").after('<div><button class="btn button-minimize"><i class="fa fa-compress" aria-hidden="true"></i></button></div>');
 
     if (typeof (Storage) !== "undefined") {
       if (localStorage.sidebar) {
-        localStorage.removeItem("sidebar");
+        $(".sidebar").toggle();
       }
-      else {
-        localStorage.setItem("sidebar", 'on');
-      }
-
     }
-  });
+
+    $(".button-minimize").click(function () {
+      $(".sidebar").toggle();
+
+      if (typeof (Storage) !== "undefined") {
+        if (localStorage.sidebar) {
+          localStorage.removeItem("sidebar");
+        }
+        else {
+          localStorage.setItem("sidebar", 'on');
+        }
+      }
+    });
+  }
 });

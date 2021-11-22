@@ -6,13 +6,10 @@ use Kanboard\Core\Plugin\Base;
 
 class Plugin extends Base
 {
-
     public function initialize()
     {
         $this->hook->on("template:layout:css", array("template" => "plugins/MinimizeSidebar/Assets/css/style.css"));
         $this->hook->on('template:layout:js', array('template' => 'plugins/MinimizeSidebar/Assets/js/main.js'));
-        $this->template->setTemplateOverride('dashboard/sidebar', 'MinimizeSidebar:dashboard/sidebar');
-        $this->template->setTemplateOverride('task/sidebar', 'MinimizeSidebar:task/sidebar');
     }
 
     public function getPluginName()
@@ -32,7 +29,7 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '1.1.0';
+        return '1.1.1';
     }
 
     public function getCompatibleVersion()
@@ -44,5 +41,4 @@ class Plugin extends Base
     {
         return 'https://github.com/kenlog/MinimizeSidebar';
     }
-
 }

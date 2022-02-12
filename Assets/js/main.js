@@ -6,8 +6,7 @@
  */
 
 $(document).ready(function () {
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('controller') == "TaskViewController" || urlParams.get('controller') == "DashboardController") {
+  if ($(".sidebar")[0]) {
     $(".sidebar").after('<div><button class="btn button-minimize"><i class="fa fa-compress" aria-hidden="true"></i></button></div>');
 
     if (typeof (Storage) !== "undefined") {
